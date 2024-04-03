@@ -19,6 +19,7 @@ let firstItem = null
 setInterval(async () => {
   try {
     let feed = await parser.parseURL('https://mijoviewerswar.miraheze.org/wiki/Special:RecentChanges?feed=rss');
+    if (feed.items.length === 0) return;
     if (firstItem !== null && firstItem !== feed.items[0].link) {
       const item = feed.items[0]
       const result = []
