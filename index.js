@@ -34,7 +34,7 @@ setInterval(async () => {
           if (child.classList.contains("diff-marker")) {
            marker = child.innerHTML === "&nbsp;" ? "" : child.innerHTML
          } else {
-            if (child.children.length === 0) continue
+            if (child.querySelectorAll("div").length === 0) continue
             let curr = null
             switch (marker) {
               case "−":
