@@ -32,7 +32,7 @@ setInterval(async () => {
         let marker = null
         for (let child of element.children) {
           if (child.classList.contains("diff-marker")) {
-           marker = child.innerHTML === "&nbsp;" ? "" : child.innerHTML
+           marker = child.dataset.marker || ""
          } else {
             if (child.querySelectorAll("div").length === 0) continue
             let curr = null
