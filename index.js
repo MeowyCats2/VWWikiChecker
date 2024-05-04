@@ -120,4 +120,4 @@ setInterval(async () => {
   } catch (e) {
     console.error(e.stack)
   }
-}, 1000)
+}, 5000)
