@@ -18,7 +18,7 @@ let parser = new Parser();
 let firstItem = null
 setInterval(async () => {
   try {
-    let feed = await parser.parseURL(process.env.checkURL);
+    let feed = await parser.parseURL(process.env.check_url);
     if (feed.items.length === 0) return;
     if (firstItem !== null && firstItem !== feed.items[0].link) {
       const item = feed.items[0]
